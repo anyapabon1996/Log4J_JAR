@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>animals-Log4J</groupId>
+  <artifactId>animals-Log4J-Test</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- Forma según versión de JAVA. En el trabajo es version 1.8 -->
+  <properties>
+	  <maven.compiler.source>17</maven.compiler.source>
+	  <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+ 	<!-- Dependencia de archivo .JAR -->
+  	<dependency>
+  		<!-- Como el archivo JAR se encuentra aqui mismo, el groupId es el mismo que el del proyecto maven -->
+	  	<groupId>animals-Log4J</groupId>
+	  	<!-- este animals, corresponde al nombre del archivo .JAR antes del ANIMALS-jar -->
+	  	<artifactId>animals</artifactId>
+	  	<!-- version de edicion: la primera -->
+	  	<version>1.0.0</version>
+	  	<!-- De donde lo va a obtener: del mismo sistema, no online -->
+	  	<scope>system</scope>
+	  	<!-- ${pom.basedir} Esto quiere decir que, como el archivo JAR esta en la misma ruta que el POM, lo busqye ahi mismo-->
+	  	<systemPath>${pom.basedir}/animals-jar-1.0.0.jar</systemPath>
+	  	<!-- <systemPath>${project.basedir}/src/main/resources/Name_Your_JAR.jar</systemPath> -->
+  	</dependency>
+  	
+  	<!-- Dependencia de Log4J CORE-->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-core</artifactId>
+	    <version>2.14.1</version>
+	</dependency>
+	
+	<!-- Dependencia de Log4J: API -->
+	<dependency>
+	    <groupId>org.apache.logging.log4j</groupId>
+	    <artifactId>log4j-api</artifactId>
+	    <version>2.14.1</version>
+	</dependency>
+	
+  </dependencies>
+  
+  
+</project>
